@@ -1,0 +1,7 @@
+.idea
+*.class
+*.mp4
+*.iml
+out
+WebContent
+*.jpg
