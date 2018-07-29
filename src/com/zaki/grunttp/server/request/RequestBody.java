@@ -120,8 +120,14 @@ public class RequestBody {
                 retrieveBodyProperties(new String(Utilizer.toByteArray(this.content)));
             } else if (contentType.equals("multipart/form-data")) {
                 retrieveFileBytes(this.content);
+            } else if (contentType.startsWith("application/json")) {
+                processJson(new String(Utilizer.toByteArray(this.content)));
             }
         }
+    }
+
+    private void processJson(String jsonString) {
+        System.out.println(jsonString);
     }
 
     /**
